@@ -69,7 +69,7 @@ export const headerStyles = StyleSheet.create({
     justifyContent: 'center',
   },
   iconDimension: {
-    width: wp('5%'),
+    width: wp('7%'),
   },
   normalText: {
     fontSize: wp('3%'),
