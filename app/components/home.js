@@ -8,7 +8,7 @@ import ItemList from './shared/item-list';
 import ItemSeperator from './shared/item-separator';
 import Header from './shared/header';
 
-export default function Home() {
+export default function Home({navigation}) {
   return (
     <LinearGradient
       colors={[
@@ -18,13 +18,15 @@ export default function Home() {
         Colors.mainColorYellow,
       ]}
       style={homeStyles.container}>
-      <Header />
+      <Header navigation={navigation} />
       <View style={{flex: 1, width: '100%'}}>
         <FlatList
           keyExtractor={(item, index) => index.toString()}
           data={data}
           ItemSeparatorComponent={() => <ItemSeperator />}
-          renderItem={({item}) => <ItemList item={item} />}
+          renderItem={({item}) => (
+            <ItemList navigation={navigation} item={item} />
+          )}
         />
       </View>
     </LinearGradient>

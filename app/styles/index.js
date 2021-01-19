@@ -83,3 +83,47 @@ export const headerStyles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+
+export const cartStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: wp('1.25%'),
+    margin: wp('1.25%'),
+    borderRadius: wp('3%'),
+  },
+  normalText: {
+    fontSize: wp('3%'),
+    color: Colors.textColor,
+    textAlign: 'justify',
+  },
+  titleText: {
+    fontSize: wp('5%'),
+    color: Colors.textColor,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});
+
+export const itemStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: wp('1.25%'),
+    margin: wp('1.25%'),
+    borderRadius: wp('3%'),
+  },
+  normalText: {
+    fontSize: wp('3%'),
+    color: Colors.textColor,
+    textAlign: 'justify',
+  },
+  titleText: {
+    fontSize: wp('5%'),
+    color: Colors.textColor,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});
