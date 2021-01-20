@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Colors} from '../../styles/colors';
 import {useDispatch} from 'react-redux';
 import {ADD_TO_CART} from '../../redux/constants';
-export default function ItemList({item, navigation}) {
+export default function ItemList({item, navigation, showAdd}) {
   const dispatch = useDispatch();
   return (
     <View style={listItemStyles.container}>
@@ -32,12 +32,17 @@ export default function ItemList({item, navigation}) {
               dataa: item,
             };
             dispatch({type: ADD_TO_CART, payload: data});
+            alert('Item added to list');
           }}>
-          <Ionicons
-            name={'add'}
-            size={listItemStyles.imageDimensions.height}
-            color={Colors.textColor}
-          />
+          {showAdd ? (
+            <Ionicons
+              name={'add'}
+              size={listItemStyles.imageDimensions.height}
+              color={Colors.textColor}
+            />
+          ) : (
+            <View />
+          )}
         </TouchableOpacity>
       </View>
     </View>

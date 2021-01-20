@@ -25,7 +25,7 @@ export default function Home({navigation}) {
           data={data}
           ItemSeparatorComponent={() => <ItemSeperator />}
           renderItem={({item}) => (
-            <ItemList navigation={navigation} item={item} />
+            <ItemList navigation={navigation} item={item} showAdd={true} />
           )}
         />
       </View>
