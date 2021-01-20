@@ -60,7 +60,7 @@ export const listItemStyles = StyleSheet.create({
 export const headerStyles = StyleSheet.create({
   container: {
     width: '100%',
-    height: hp('10%'),
+    height: hp('15%'),
     backgroundColor: '#414141',
     borderRadius: wp('2.5%'),
     marginBottom: hp('1.25%'),
@@ -104,6 +104,11 @@ export const cartStyles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  button: {
+    backgroundColor: '#424242',
+    borderRadius: wp('5%'),
+    padding: wp('1%'),
+  },
 });
 
 export const itemStyles = StyleSheet.create({
@@ -143,5 +148,10 @@ export const itemStyles = StyleSheet.create({
   imageStyles: {
     borderRadius: wp('5%'),
     marginRight: wp('2%'),
+  },
+  button: {
+    backgroundColor: '#424242',
+    borderRadius: wp('5%'),
+    padding: wp('1%'),
   },
 });

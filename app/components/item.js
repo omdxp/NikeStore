@@ -17,7 +17,9 @@ export default function Item({navigation, route}) {
       ]}
       style={itemStyles.container}>
       <View style={{flex: 1}}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={itemStyles.button}>
           <Text style={itemStyles.titleText}>Go back to list</Text>
         </TouchableOpacity>
       </View>

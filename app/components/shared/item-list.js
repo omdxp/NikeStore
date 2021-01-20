@@ -3,7 +3,10 @@ import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {listItemStyles} from '../../styles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Colors} from '../../styles/colors';
+import {useDispatch} from 'react-redux';
+import {ADD_TO_CART} from '../../redux/constants';
 export default function ItemList({item, navigation}) {
+  const dispatch = useDispatch();
   return (
     <View style={listItemStyles.container}>
       <View style={{flex: 3}}>
@@ -23,7 +26,13 @@ export default function ItemList({item, navigation}) {
         </View>
       </View>
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <TouchableOpacity onPress={() => console.log('Pressed!')}>
+        <TouchableOpacity
+          onPress={() => {
+            const data = {
+              dataa: item,
+            };
+            dispatch({type: ADD_TO_CART, payload: data});
+          }}>
           <Ionicons
             name={'add'}
             size={listItemStyles.imageDimensions.height}
