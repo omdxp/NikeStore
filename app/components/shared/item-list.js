@@ -7,7 +7,7 @@ export default function ItemList({item, navigation}) {
   return (
     <View style={listItemStyles.container}>
       <View style={{flex: 3}}>
-        <TouchableOpacity onPress={() => navigation.navigate('Item')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Item', {item})}>
           <Image
             style={listItemStyles.image}
             source={{

@@ -116,14 +116,32 @@ export const itemStyles = StyleSheet.create({
     borderRadius: wp('3%'),
   },
   normalText: {
-    fontSize: wp('3%'),
+    fontSize: wp('2%'),
     color: Colors.textColor,
     textAlign: 'justify',
   },
   titleText: {
-    fontSize: wp('5%'),
+    fontSize: wp('3%'),
     color: Colors.textColor,
     fontWeight: 'bold',
-    textAlign: 'center',
+    textAlign: 'justify',
+    textAlignVertical: 'top',
+  },
+  card: {
+    flex: 7,
+    width: wp('70%'),
+    height: wp('70%'),
+    margin: wp('3%'),
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+  },
+  imageDimensions: {
+    width: wp('30%'),
+    height: wp('30%'),
+  },
+  imageStyles: {
+    borderRadius: wp('5%'),
+    marginRight: wp('2%'),
   },
 });
